@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maheen's Cafe and Bites | Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8eee1;
+    color:#2d170c;
+}
+
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:1000;
+
+    padding:18px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:rgba(30,12,5,.94);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(220,174,83,.3);
+}
+
+.logo{
+    font-family:'Great Vibes',cursive;
+    font-size:35px;
+    color:#efc56b;
+}
+
+.logo small{
+    font-family:'Poppins',sans-serif;
+    font-size:8px;
+    letter-spacing:3px;
+    color:white;
+    margin-left:8px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#eee;
+    font-size:12px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e9bc5e;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:600px;
+
+    padding-top:100px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(25,9,3,.65),
+        rgba(25,9,3,.85)
+    ),
+
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+
+    animation:fadeUp 1.2s ease;
+}
+
+.hero-script{
+    font-family:'Great Vibes',cursive;
+    color:#efc56b;
+    font-size:70px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    color:white;
+    font-size:68px;
+    letter-spacing:2px;
+}
+
+.hero-line{
+    width:130px;
+    height:3px;
+    background:#e5b657;
+    margin:25px auto;
+}
+
+.hero p{
+    color:#ddd;
+    max-width:650px;
+    margin:auto;
+    line-height:2;
+    font-size:14px;
+}
+
+
+/* =========================
+   FLOATING BEANS
+========================= */
+
+.bean{
+    position:absolute;
+
+    width:22px;
+    height:34px;
+
+    border-radius:50%;
+
+    background:#6b2c12;
+
+    transform:rotate(35deg);
+
+    animation:beanFloat 6s infinite ease-in-out;
+}
+
+.bean:after{
+    content:"";
+
+    position:absolute;
+
+    left:9px;
+    top:4px;
+
+    width:3px;
+    height:26px;
+
+    background:#a55c2c;
+
+    border-radius:50%;
+}
+
+.b1{
+    left:10%;
+    top:30%;
+}
+
+.b2{
+    right:12%;
+    top:25%;
+    animation-delay:1s;
+}
+
+.b3{
+    left:20%;
+    bottom:20%;
+    animation-delay:2s;
+}
+
+.b4{
+    right:20%;
+    bottom:25%;
+    animation-delay:3s;
+}
+
+
+/* =========================
+   CATEGORY NAV
+========================= */
+
+.categories{
+
+    padding:45px 6%;
+
+    background:#fffaf4;
+
+    text-align:center;
+
+    position:sticky;
+
+    top:70px;
+
+    z-index:900;
+
+    border-bottom:1px solid #ead7be;
+}
+
+.categories a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:#63351e;
+
+    border:1px solid #d9b985;
+
+    padding:10px 20px;
+
+    margin:5px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    transition:.3s;
+}
+
+.categories a:hover{
+
+    background:#64351e;
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   MENU SECTION
+========================= */
+
+.menu-section{
+
+    padding:90px 7%;
+
+    position:relative;
+}
+
+.menu-section:nth-child(even){
+
+    background:#fffaf4;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.section-title small{
+
+    color:#a66a2b;
+
+    letter-spacing:5px;
+
+    font-size:10px;
+}
+
+.section-title h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:45px;
+
+    margin:10px 0;
+}
+
+.section-title h2 span{
+
+    color:#a66a2b;
+}
+
+.section-title p{
+
+    color:#806e5e;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   MENU GRID
+========================= */
+
+.menu-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+    max-width:1400px;
+
+    margin:auto;
+}
+
+
+/* =========================
+   MENU CARD
+========================= */
+
+.menu-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid #ead6bd;
+
+    box-shadow:
+    0 12px 30px rgba(50,25,5,.09);
+
+    transition:.45s;
+
+    position:relative;
+}
+
+.menu-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 25px 45px rgba(50,25,5,.18);
+}
+
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.food-image{
+
+    height:210px;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.food-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.menu-card:hover .food-image img{
+
+    transform:scale(1.1);
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price{
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+    background:#e5b454;
+
+    color:#2b1509;
+
+    padding:8px 13px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    z-index:2;
+}
+
+
+/* =========================
+   CARD INFO
+========================= */
+
+.card-info{
+
+    padding:22px;
+}
+
+.card-info h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.card-info p{
+
+    font-size:11px;
+
+    color:#77675b;
+
+    line-height:1.7;
+
+    min-height:42px;
+}
+
+.order{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    background:#3b2114;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:9px;
+
+    transition:.3s;
+}
+
+.order:hover{
+
+    background:#d49e43;
+
+    color:#2b1509;
+}
+
+
+/* =========================
+   SPECIAL BANNER
+========================= */
+
+.special{
+
+    margin:80px auto;
+
+    max-width:1200px;
+
+    min-height:300px;
+
+    border-radius:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(25,8,2,.65),
+        rgba(25,8,2,.65)
+    ),
+
+    url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+    box-shadow:
+    0 25px 50px rgba(50,25,5,.2);
+}
+
+.special-content{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+}
+
+.special-content h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#efc56b;
+}
+
+.special-content h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:32px;
+
+    margin-bottom:15px;
+}
+
+.special-content p{
+
+    font-size:12px;
+
+    color:#ddd;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#170704;
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+}
+
+.footer-logo{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#efc56b;
+
+    font-size:50px;
+}
+
+footer p{
+
+    color:#999;
+
+    font-size:11px;
+
+    margin-top:8px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes beanFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(35deg);
+    }
+
+    50%{
+        transform:translateY(-25px) rotate(150deg);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .menu-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+}
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero-script{
+        font-size:50px;
+    }
+
+    .menu-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .categories a{
+        padding:8px 12px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        Maheen's
+        <small>CAFE & BITES</small>
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="menu.html">MENU</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="coffee.html">COFFEE</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="bean b1"></div>
+    <div class="bean b2"></div>
+    <div class="bean b3"></div>
+    <div class="bean b4"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-script">
+            Welcome to
+        </div>
+
+        <h1>
+            Maheen's Menu
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+            Freshly brewed coffee, delicious bites
+            and irresistible desserts — all served
+            with a little love.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORY BUTTONS
+========================= -->
+
+<div class="categories">
+
+    <a href="#hotcoffee">☕ Hot Coffee</a>
+
+    <a href="#coldcoffee">🧊 Cold Coffee</a>
+
+    <a href="#tea">🍵 Tea & Drinks</a>
+
+    <a href="#bakery">🥐 Bakery</a>
+
+    <a href="#bites">🍔 Bites</a>
+
+    <a href="#desserts">🍰 Desserts</a>
+
+</div>
+
+
+
+<!-- =====================================================
+     HOT COFFEE
+===================================================== -->
+
+<section class="menu-section" id="hotcoffee">
+
+    <div class="section-title">
+
+        <small>
+            FRESHLY BREWED
+        </small>
+
+        <h2>
+            Hot <span>Coffee</span>
+        </h2>
+
+        <p>
+            Warm cups made for beautiful mornings and cozy evenings.
+        </p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <!-- 1 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹120</span>
+
+                <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Espresso</h3>
+
+                <p>
+                    Strong, rich and perfectly brewed.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹160</span>
+
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Cappuccino</h3>
+
+                <p>
+                    Creamy espresso with silky milk foam.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹170</span>
+
+                <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Café Latte</h3>
+
+                <p>
+                    Smooth espresso blended with warm milk.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹180</span>
+
+                <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Café Mocha</h3>
+
+                <p>
+                    Espresso, chocolate and creamy milk.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹140</span>
+
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Americano</h3>
+
+                <p>
+                    Espresso with hot water for a smooth finish.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹190</span>
+
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Caramel Latte</h3>
+
+                <p>
+                    Latte with delicious caramel sweetness.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹150</span>
+
+                <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Filter Coffee</h3>
+
+                <p>
+                    Traditional South Indian filter coffee.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹200</span>
+
+                <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Hazelnut Coffee</h3>
+
+                <p>
+                    Rich coffee with a nutty hazelnut flavour.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COLD COFFEE
+===================================================== -->
+
+<section class="menu-section" id="coldcoffee">
+
+    <div class="section-title">
+
+        <small>
+            CHILLED & REFRESHING
+        </small>
+
+        <h2>
+            Cold <span>Coffee</span>
+        </h2>
+
+        <p>
+            Cool down with our creamy coffee creations.
+        </p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹190</span>
+
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Iced Latte</h3>
+
+                <p>
+                    Chilled espresso with creamy cold milk.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹210</span>
+
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Cold Mocha</h3>
+
+                <p>
+                    Chilled coffee blended with chocolate.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹220</span>
+
+                <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Caramel Frappe</h3>
+
+                <p>
+                    Creamy blended coffee topped with caramel.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹200</span>
+
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Cold Brew</h3>
+
+                <p>
+                    Smooth slow-brewed coffee served chilled.
+                </p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TEA & DRINKS
+===================================================== -->
+
+<section class="menu-section" id="tea">
+
+    <div class="section-title">
+
+        <small>
+            MORE THAN COFFEE
+        </small>
+
+        <h2>
+            Tea & <span>Drinks</span>
+        </h2>
+
+        <p>
+            Something refreshing for every mood.
+        </p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹100</span>
+
+                <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Masala Tea</h3>
+
+                <p>Classic Indian tea with aromatic spices.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹130</span>
+
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Green Tea</h3>
+
+                <p>Light, refreshing and naturally soothing.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹180</span>
+
+                <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Hot Chocolate</h3>
+
+                <p>Rich chocolate drink topped with creamy foam.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹190</span>
+
+                <img src="https://images.unsplash.com/photo-1533777324565-a040eb52facd?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Chocolate Shake</h3>
+
+                <p>Thick, creamy and packed with chocolate.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BAKERY
+===================================================== -->
+
+<section class="menu-section" id="bakery">
+
+    <div class="section-title">
+
+        <small>
+            FRESH FROM THE OVEN
+        </small>
+
+        <h2>
+            Bakery <span>Favourites</span>
+        </h2>
+
+        <p>
+            Perfectly paired with your favourite coffee.
+        </p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹150</span>
+
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Butter Croissant</h3>
+
+                <p>Golden, flaky and buttery.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹130</span>
+
+                <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Chocolate Muffin</h3>
+
+                <p>Soft chocolate muffin with chocolate chips.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹140</span>
+
+                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Cinnamon Roll</h3>
+
+                <p>Soft roll filled with cinnamon and sugar.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹120</span>
+
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Glazed Donut</h3>
+
+                <p>Soft donut finished with sweet glaze.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BITES
+===================================================== -->
+
+<section class="menu-section" id="bites">
+
+    <div class="section-title">
+
+        <small>
+            SAVOURY & DELICIOUS
+        </small>
+
+        <h2>
+            Cafe <span>Bites</span>
+        </h2>
+
+        <p>
+            Delicious snacks for every coffee break.
+        </p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹220</span>
+
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Grilled Sandwich</h3>
+
+                <p>Toasted bread with fresh vegetables and cheese.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹250</span>
+
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Classic Burger</h3>
+
+                <p>Juicy patty with lettuce, cheese and sauce.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹160</span>
+
+                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>French Fries</h3>
+
+                <p>Crispy golden fries served with dip.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DESSERTS
+===================================================== -->
+
+<section class="menu-section" id="desserts">
+
+    <div class="section-title">
+
+        <small>
+            SWEET ENDINGS
+        </small>
+
+        <h2>
+            Delicious <span>Desserts</span>
+        </h2>
+
+        <p>
+            Because every coffee deserves something sweet.
+        </p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹220</span>
+
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Chocolate Cake</h3>
+
+                <p>Rich, moist chocolate cake with creamy frosting.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹240</span>
+
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Cheesecake</h3>
+
+                <p>Silky cheesecake with a delicious fruity topping.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹250</span>
+
+                <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Tiramisu</h3>
+
+                <p>Classic Italian dessert with coffee and cocoa.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="food-image">
+
+                <span class="price">₹230</span>
+
+                <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=700&q=80">
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>Belgian Waffles</h3>
+
+                <p>Crispy waffles served with chocolate and cream.</p>
+
+                <a href="#" class="order">ORDER NOW</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SPECIAL -->
+
+    <div class="special">
+
+        <div class="special-content">
+
+            <h2>
+                Maheen's Special
+            </h2>
+
+            <h3>
+                Coffee & Dessert Combo
+            </h3>
+
+            <p>
+                Any hot coffee + dessert
+                <br>
+                for just ₹299
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Maheen's
+    </div>
+
+    <p>
+        CAFE AND BITES
+    </p>
+
+    <p>
+        Great Coffee • Delicious Bites • Sweet Memories
+    </p>
+
+    <p>
+        © 2026 Maheen's Cafe and Bites
+    </p>
+
+</footer>
+
+
+</body>
+</html>

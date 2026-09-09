@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Maheen's Cafe and Bites</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#100402;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav{
+    height:75px;
+    width:100%;
+
+    position:fixed;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    background:rgba(15,4,2,.95);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid #795321;
+}
+
+.logo{
+    font-family:'Great Vibes',cursive;
+    font-size:38px;
+    color:#e8b34e;
+
+    text-shadow:0 0 15px rgba(232,179,78,.4);
+}
+
+.logo small{
+    display:block;
+
+    font-family:Poppins,sans-serif;
+
+    font-size:7px;
+
+    letter-spacing:4px;
+
+    text-align:center;
+
+    color:white;
+
+    margin-top:-8px;
+}
+
+nav ul{
+    display:flex;
+    gap:22px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:10px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e7b34e;
+}
+
+.home{
+    border:1px solid #c99639;
+    padding:9px 18px;
+    border-radius:25px;
+    color:#e7b34e !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:500px;
+
+    padding-top:75px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        rgba(18,5,2,.52),
+        rgba(18,5,2,.94)
+    ),
+
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+
+    animation:appear 1.4s ease;
+}
+
+.subtitle{
+    color:#dda640;
+    letter-spacing:6px;
+    font-size:10px;
+}
+
+.script{
+    font-family:'Great Vibes',cursive;
+    font-size:78px;
+    color:#edbf5b;
+
+    text-shadow:
+    0 0 20px rgba(235,181,74,.5);
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:65px;
+}
+
+.hero h1 span{
+    color:#dda640;
+}
+
+.line{
+    width:120px;
+    height:3px;
+
+    background:#dda640;
+
+    margin:22px auto;
+
+    box-shadow:0 0 20px #dda640;
+}
+
+.hero p{
+    max-width:620px;
+
+    margin:auto;
+
+    color:#cbb9ad;
+
+    font-size:11px;
+
+    line-height:2;
+}
+
+
+/* ================= COFFEE CUP ================= */
+
+.cup{
+    position:absolute;
+
+    right:8%;
+    bottom:70px;
+
+    width:90px;
+    height:55px;
+
+    background:#f1e7d9;
+
+    border-radius:5px 5px 30px 30px;
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.7);
+
+    animation:cup 4s infinite ease-in-out;
+}
+
+.cup:before{
+    content:"";
+
+    position:absolute;
+
+    left:7px;
+    top:5px;
+
+    width:76px;
+    height:18px;
+
+    background:#48200d;
+
+    border-radius:50%;
+}
+
+.cup:after{
+    content:"";
+
+    position:absolute;
+
+    right:-28px;
+    top:13px;
+
+    width:32px;
+    height:32px;
+
+    border:8px solid #eee4d7;
+
+    border-left:0;
+
+    border-radius:0 50% 50% 0;
+}
+
+
+/* STEAM */
+
+.steam{
+    position:absolute;
+
+    right:9%;
+    bottom:125px;
+}
+
+.steam span{
+    display:inline-block;
+
+    width:7px;
+    height:55px;
+
+    margin:0 4px;
+
+    border-left:2px solid rgba(255,255,255,.6);
+
+    border-radius:50%;
+
+    animation:steam 3s infinite;
+}
+
+.steam span:nth-child(2){
+    animation-delay:1s;
+}
+
+.steam span:nth-child(3){
+    animation-delay:2s;
+}
+
+
+/* ================= CONTACT AREA ================= */
+
+.contact{
+    padding:100px 7%;
+
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #3a1709,
+        #100402 70%
+    );
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.heading small{
+    color:#dca43f;
+    letter-spacing:6px;
+    font-size:10px;
+}
+
+.heading h2{
+    font-family:'Playfair Display',serif;
+    font-size:46px;
+    margin-top:10px;
+}
+
+.heading h2 span{
+    color:#e3ad46;
+}
+
+
+/* ================= MAIN GRID ================= */
+
+.contact-grid{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    gap:28px;
+}
+
+
+/* ================= DETAILS ================= */
+
+.details{
+    padding:38px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #391609,
+        #190704
+    );
+
+    border:1px solid #78501e;
+
+    box-shadow:
+    0 25px 55px rgba(0,0,0,.5);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.details:after{
+    content:"☕";
+
+    position:absolute;
+
+    right:-20px;
+    bottom:-35px;
+
+    font-size:150px;
+
+    opacity:.035;
+}
+
+.details h3{
+    font-family:'Playfair Display',serif;
+
+    color:#e8bd62;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+}
+
+
+/* DETAIL ITEM */
+
+.detail{
+    display:flex;
+
+    gap:16px;
+
+    align-items:center;
+
+    padding:17px 0;
+
+    border-bottom:1px solid rgba(220,165,63,.15);
+}
+
+.detail:last-child{
+    border-bottom:none;
+}
+
+.icon{
+    min-width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#4a200c;
+
+    border:1px solid #a5742b;
+
+    font-size:20px;
+
+    box-shadow:
+    0 0 18px rgba(218,164,62,.15);
+}
+
+.detail h4{
+    color:#e6d5bc;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:15px;
+
+    margin-bottom:4px;
+}
+
+.detail p,
+.detail a{
+    color:#aa988d;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    line-height:1.8;
+}
+
+.detail a:hover{
+    color:#e4af45;
+}
+
+
+/* ================= SOCIAL ================= */
+
+.social{
+    margin-top:25px;
+
+    display:flex;
+
+    gap:12px;
+}
+
+.social a{
+    width:40px;
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #755020;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    color:#dca844;
+
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#dca844;
+    color:#160604;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 20px rgba(220,168,68,.4);
+}
+
+
+/* ================= MAP ================= */
+
+.map{
+    min-height:500px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:1px solid #79531f;
+
+    box-shadow:
+    0 25px 55px rgba(0,0,0,.5);
+
+    position:relative;
+}
+
+.map iframe{
+    width:100%;
+    height:100%;
+    min-height:500px;
+
+    border:0;
+}
+
+
+/* MAP LABEL */
+
+.map-label{
+    position:absolute;
+
+    left:20px;
+    bottom:20px;
+
+    padding:14px 20px;
+
+    background:rgba(20,5,2,.94);
+
+    border:1px solid #c18b31;
+
+    border-radius:13px;
+
+    z-index:5;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.5);
+}
+
+.map-label strong{
+    color:#e7b34d;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:15px;
+}
+
+.map-label span{
+    display:block;
+
+    color:#a9978d;
+
+    font-size:8px;
+
+    margin-top:3px;
+}
+
+
+/* ================= HOURS ================= */
+
+.hours{
+    max-width:1200px;
+
+    margin:55px auto 0;
+
+    padding:35px;
+
+    text-align:center;
+
+    background:#241006;
+
+    border:1px solid #704b1d;
+
+    border-radius:23px;
+}
+
+.hours h3{
+    font-family:'Playfair Display',serif;
+
+    color:#e8b550;
+
+    font-size:27px;
+
+    margin-bottom:25px;
+}
+
+.hour-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.day{
+    padding:18px;
+
+    border-radius:15px;
+
+    background:#321508;
+
+    border:1px solid rgba(215,161,59,.18);
+}
+
+.day h4{
+    font-family:'Playfair Display',serif;
+
+    color:#e6d0ad;
+
+    font-size:14px;
+}
+
+.day p{
+    color:#9e8d82;
+
+    font-size:9px;
+
+    margin-top:6px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+
+    padding:55px 20px;
+
+    background:#080201;
+
+    border-top:1px solid #39210d;
+}
+
+.footer-logo{
+    font-family:'Great Vibes',cursive;
+
+    font-size:50px;
+
+    color:#e7b24d;
+}
+
+footer p{
+    color:#71635c;
+
+    font-size:9px;
+
+    margin-top:8px;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes cup{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes steam{
+    0%{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-55px);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    nav ul{
+        display:none;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hour-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cup,
+    .steam{
+        display:none;
+    }
+}
+
+@media(max-width:600px){
+
+    .script{
+        font-size:55px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .heading h2{
+        font-size:36px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        Maheen's
+        <small>CAFE AND BITES</small>
+    </div>
+
+    <ul>
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="menu.html">MENU</a></li>
+
+        <li><a href="coffee.html">COFFEE</a></li>
+
+        <li><a href="specials.html">SPECIALS</a></li>
+
+        <li><a href="gallery.html">GALLERY</a></li>
+
+        <li><a href="review.html">REVIEWS</a></li>
+
+        <li><a href="about.html">ABOUT</a></li>
+
+        <li><a href="contact.html" class="home">CONTACT</a></li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="subtitle">
+            WE WOULD LOVE TO HEAR FROM YOU
+        </div>
+
+        <div class="script">
+            Maheen's
+        </div>
+
+        <h1>
+            Contact <span>Us</span>
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            Come visit us for freshly brewed coffee,
+            delicious bites and beautiful moments
+            in the heart of Pune.
+        </p>
+
+    </div>
+
+
+    <!-- COFFEE CUP -->
+
+    <div class="cup"></div>
+
+    <div class="steam">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+
+    <div class="heading">
+
+        <small>
+            FIND • CALL • VISIT
+        </small>
+
+        <h2>
+            We'd Love To <span>Meet You</span>
+        </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <!-- DETAILS -->
+
+        <div class="details">
+
+            <h3>
+                Contact Details
+            </h3>
+
+
+            <!-- LOCATION -->
+
+            <div class="detail">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h4>
+                        Visit Us
+                    </h4>
+
+                    <p>
+                        Maheen's Cafe and Bites<br>
+                        Koregaon Park<br>
+                        Pune, Maharashtra - 411001
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="detail">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <div>
+
+                    <h4>
+                        Call Us
+                    </h4>
+
+                    <a href="tel:+919876543210">
+                        +91 98765 43210
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="detail">
+
+                <div class="icon">
+                    ✉️
+                </div>
+
+                <div>
+
+                    <h4>
+                        Email Us
+                    </h4>
+
+                    <a href="mailto:hello@maheenscafe.com">
+                        hello@maheenscafe.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HOURS -->
+
+            <div class="detail">
+
+                <div class="icon">
+                    🕐
+                </div>
+
+                <div>
+
+                    <h4>
+                        Opening Hours
+                    </h4>
+
+                    <p>
+                        Monday – Friday: 8 AM – 10 PM<br>
+                        Saturday – Sunday: 9 AM – 11 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="detail">
+
+                <div class="icon">
+                    📸
+                </div>
+
+                <div>
+
+                    <h4>
+                        Follow Us
+                    </h4>
+
+                    <a href="#">
+                        @maheenscafeandbites
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="social">
+
+                <a href="#">f</a>
+
+                <a href="#">◎</a>
+
+                <a href="#">𝕏</a>
+
+                <a href="#">▶</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PUNE MAP -->
+
+        <div class="map">
+
+            <iframe
+                src="https://www.google.com/maps?q=Koregaon+Park,+Pune,+Maharashtra&output=embed"
+                loading="lazy">
+            </iframe>
+
+            <div class="map-label">
+
+                <strong>📍 Pune</strong>
+
+                <span>
+                    Koregaon Park, Maharashtra
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HOURS -->
+
+    <div class="hours">
+
+        <h3>
+            ☕ Café Hours
+        </h3>
+
+        <div class="hour-grid">
+
+            <div class="day">
+                <h4>Monday – Friday</h4>
+                <p>8:00 AM – 10:00 PM</p>
+            </div>
+
+            <div class="day">
+                <h4>Saturday</h4>
+                <p>8:00 AM – 11:00 PM</p>
+            </div>
+
+            <div class="day">
+                <h4>Sunday</h4>
+                <p>9:00 AM – 11:00 PM</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        Maheen's
+    </div>
+
+    <p>
+        CAFE AND BITES
+    </p>
+
+    <p>
+        Coffee • Bites • Conversations • Pune
+    </p>
+
+    <p>
+        © 2026 Maheen's Cafe and Bites
+    </p>
+
+</footer>
+
+
+</body>
+</html>

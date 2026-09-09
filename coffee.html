@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maheen's Cafe and Bites | Coffee</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8eee2;
+    color:#2b160b;
+}
+
+
+/* =========================
+   BACK TO MENU
+========================= */
+
+.back-menu{
+    position:fixed;
+    top:22px;
+    left:25px;
+    z-index:1000;
+
+    text-decoration:none;
+    color:#f4c96c;
+
+    background:rgba(25,10,4,.9);
+
+    padding:10px 22px;
+
+    border:1px solid #d5a34c;
+    border-radius:30px;
+
+    font-size:12px;
+
+    transition:.3s;
+}
+
+.back-menu:hover{
+    background:#e0ae52;
+    color:#241107;
+    transform:translateX(-4px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    height:100vh;
+    min-height:700px;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+        rgba(20,7,3,.45),
+        rgba(20,7,3,.8)
+    ),
+
+    radial-gradient(
+        circle at center,
+        #75462c,
+        #351a0e 45%,
+        #120603 90%
+    );
+
+}
+
+
+/* =========================
+   WARM LIGHT
+========================= */
+
+.glow{
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:#d79b38;
+
+    filter:blur(100px);
+
+    opacity:.12;
+}
+
+.glow1{
+    left:-120px;
+    top:100px;
+}
+
+.glow2{
+    right:-100px;
+    bottom:40px;
+}
+
+
+/* =========================
+   HANGING LIGHTS
+========================= */
+
+.hanging-light{
+
+    position:absolute;
+
+    top:0;
+
+    width:2px;
+    height:145px;
+
+    background:#3b2114;
+}
+
+.hanging-light:after{
+
+    content:"";
+
+    position:absolute;
+
+    top:135px;
+    left:-18px;
+
+    width:38px;
+    height:24px;
+
+    background:#d9a63d;
+
+    border-radius:50% 50% 15% 15%;
+
+    box-shadow:
+    0 0 20px #d9a63d,
+    0 0 55px rgba(217,166,61,.45);
+}
+
+.light1{
+    left:18%;
+}
+
+.light2{
+    left:35%;
+    height:100px;
+}
+
+.light3{
+    right:35%;
+    height:110px;
+}
+
+.light4{
+    right:18%;
+}
+
+
+/* =========================
+   NYC BUILDINGS
+========================= */
+
+.building{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:180px;
+
+    background:#130806;
+
+    opacity:.7;
+}
+
+.building-left{
+    height:330px;
+    left:0;
+}
+
+.building-right{
+    height:390px;
+    right:0;
+}
+
+.window{
+
+    position:absolute;
+
+    width:13px;
+    height:25px;
+
+    background:#d9a344;
+
+    box-shadow:
+    0 0 15px rgba(217,163,68,.4);
+}
+
+.w1{left:30px;top:50px}
+.w2{left:75px;top:90px}
+.w3{left:125px;top:140px}
+.w4{left:50px;top:190px}
+.w5{left:115px;top:240px}
+
+.w6{left:35px;top:65px}
+.w7{left:90px;top:115px}
+.w8{left:140px;top:170px}
+.w9{left:55px;top:235px}
+.w10{left:125px;top:300px}
+
+
+/* =========================
+   NYC SIGN
+========================= */
+
+.nyc-sign{
+
+    position:absolute;
+
+    top:42px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:12px 35px;
+
+    color:#f1c86d;
+
+    border:1px solid #b9873b;
+
+    background:rgba(15,5,2,.6);
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    box-shadow:
+    0 0 25px rgba(221,170,70,.08);
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:20;
+
+    text-align:center;
+
+    width:800px;
+
+    animation:appear 1.4s ease;
+}
+
+.script{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#f3c96c;
+
+    font-size:64px;
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    color:white;
+
+    font-size:75px;
+
+    line-height:1.1;
+
+    margin-top:5px;
+}
+
+.line{
+
+    width:130px;
+
+    height:3px;
+
+    background:#e6b754;
+
+    margin:25px auto;
+}
+
+.hero p{
+
+    color:#e0d8d1;
+
+    font-size:14px;
+
+    line-height:2;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+.hero p strong{
+    color:#f0c36a;
+}
+
+
+/* =========================
+   COFFEE MACHINE
+========================= */
+
+.machine{
+
+    position:absolute;
+
+    left:3%;
+
+    bottom:30px;
+
+    width:290px;
+
+    height:350px;
+
+    z-index:12;
+
+    opacity:.75;
+
+    animation:float 5s infinite ease-in-out;
+}
+
+.machine-body{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:245px;
+
+    height:220px;
+
+    left:15px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #514942,
+        #15110f
+    );
+
+    border:1px solid #665a50;
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.6);
+}
+
+.machine-top{
+
+    position:absolute;
+
+    top:-38px;
+
+    left:25px;
+
+    width:195px;
+
+    height:55px;
+
+    background:#29221e;
+
+    border-radius:13px;
+}
+
+.screen{
+
+    position:absolute;
+
+    left:18px;
+
+    top:14px;
+
+    width:70px;
+
+    height:25px;
+
+    background:#080605;
+
+    border:1px solid #66584d;
+
+    border-radius:5px;
+}
+
+.screen:after{
+
+    content:"READY";
+
+    color:#d9ad54;
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+    position:absolute;
+
+    top:7px;
+
+    left:18px;
+}
+
+.buttons{
+
+    position:absolute;
+
+    right:15px;
+
+    top:20px;
+
+    display:flex;
+
+    gap:7px;
+}
+
+.buttons span{
+
+    width:12px;
+
+    height:12px;
+
+    background:#d3a03f;
+
+    border-radius:50%;
+
+    box-shadow:0 0 10px rgba(211,160,63,.5);
+}
+
+.filter{
+
+    position:absolute;
+
+    top:78px;
+
+    left:88px;
+
+    width:68px;
+
+    height:45px;
+
+    background:#111;
+
+    border:5px solid #777;
+
+    border-radius:50%;
+}
+
+.filter-handle{
+
+    position:absolute;
+
+    width:75px;
+
+    height:10px;
+
+    right:-72px;
+
+    top:13px;
+
+    background:#111;
+
+    border-radius:10px;
+}
+
+.nozzle{
+
+    position:absolute;
+
+    top:120px;
+
+    left:117px;
+
+    width:10px;
+
+    height:40px;
+
+    background:#777;
+}
+
+.stream{
+
+    position:absolute;
+
+    top:153px;
+
+    left:119px;
+
+    width:7px;
+
+    height:60px;
+
+    background:#68290e;
+
+    border-radius:10px;
+
+    animation:pour 2.5s infinite;
+}
+
+.machine-cup{
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:80px;
+
+    width:85px;
+
+    height:55px;
+
+    background:#dfc7a5;
+
+    border-radius:5px 5px 25px 25px;
+}
+
+.machine-cup:before{
+
+    content:"";
+
+    position:absolute;
+
+    top:4px;
+    left:5px;
+
+    width:75px;
+    height:16px;
+
+    background:#45200c;
+
+    border-radius:50%;
+}
+
+.machine-cup:after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-26px;
+
+    top:12px;
+
+    width:32px;
+
+    height:28px;
+
+    border:7px solid #dfc7a5;
+
+    border-left:0;
+
+    border-radius:0 20px 20px 0;
+}
+
+
+/* =========================
+   COFFEE SHELF
+========================= */
+
+.shelf{
+
+    position:absolute;
+
+    right:2%;
+
+    bottom:65px;
+
+    width:260px;
+
+    height:250px;
+
+    z-index:8;
+
+    opacity:.65;
+}
+
+.shelf-board{
+
+    position:absolute;
+
+    width:250px;
+
+    height:12px;
+
+    background:#4a2817;
+
+    border-radius:5px;
+}
+
+.shelf-board.one{
+    top:60px;
+}
+
+.shelf-board.two{
+    top:145px;
+}
+
+.shelf-board.three{
+    top:230px;
+}
+
+.jar{
+
+    position:absolute;
+
+    width:38px;
+
+    height:55px;
+
+    background:#c8a77b;
+
+    border-radius:7px;
+
+    bottom:25px;
+}
+
+.jar1{left:20px}
+.jar2{left:75px;height:65px}
+.jar3{left:135px;height:48px}
+.jar4{left:190px;height:60px}
+
+
+/* =========================
+   COFFEE CUPS DECOR
+========================= */
+
+.decor-cup{
+
+    position:absolute;
+
+    z-index:10;
+
+    font-size:65px;
+
+    filter:
+    drop-shadow(0 10px 10px rgba(0,0,0,.5));
+
+    opacity:.55;
+
+    animation:cupFloat 4s infinite ease-in-out;
+}
+
+.cup1{
+    left:27%;
+    bottom:9%;
+}
+
+.cup2{
+    right:27%;
+    top:23%;
+    font-size:50px;
+}
+
+
+/* =========================
+   COFFEE BEANS
+========================= */
+
+.bean{
+
+    position:absolute;
+
+    width:22px;
+
+    height:34px;
+
+    background:#63270e;
+
+    border-radius:50%;
+
+    transform:rotate(30deg);
+
+    z-index:7;
+
+    opacity:.8;
+
+    animation:beanFloat 6s infinite;
+}
+
+.bean:after{
+
+    content:"";
+
+    position:absolute;
+
+    left:9px;
+
+    top:4px;
+
+    width:3px;
+
+    height:25px;
+
+    background:#a85b28;
+
+    border-radius:50%;
+}
+
+.bean1{
+    left:12%;
+    top:30%;
+}
+
+.bean2{
+    left:24%;
+    top:65%;
+    animation-delay:1s;
+}
+
+.bean3{
+    right:13%;
+    top:35%;
+    animation-delay:2s;
+}
+
+.bean4{
+    right:25%;
+    bottom:20%;
+    animation-delay:3s;
+}
+
+
+/* =========================
+   BRANDS SECTION
+========================= */
+
+.brands{
+
+    position:relative;
+
+    padding:110px 6%;
+
+    background:#fffaf3;
+
+    overflow:hidden;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title small{
+
+    color:#a76628;
+
+    letter-spacing:5px;
+
+    font-size:11px;
+}
+
+.section-title h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:50px;
+
+    margin-top:10px;
+}
+
+.section-title h2 span{
+    color:#a76628;
+}
+
+.section-title p{
+
+    color:#806e60;
+
+    font-size:13px;
+
+    margin-top:10px;
+}
+
+
+/* =========================
+   BRAND GRID
+========================= */
+
+.brand-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:22px;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:5;
+}
+
+.brand-card{
+
+    min-height:390px;
+
+    padding:28px 18px;
+
+    text-align:center;
+
+    background:#f5eadc;
+
+    border:1px solid #e5cba9;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 35px rgba(50,25,5,.1);
+
+    transition:.5s;
+}
+
+.brand-card:hover{
+
+    transform:translateY(-13px);
+
+    background:#173c31;
+
+    color:white;
+}
+
+
+/* =========================
+   PICTURE SPACE
+========================= */
+
+.brand-image{
+
+    width:155px;
+
+    height:155px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    border:5px solid #dcae51;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 25px rgba(60,30,5,.18);
+}
+
+.brand-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+}
+
+.placeholder{
+
+    font-size:11px;
+
+    color:#9a795d;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   BRAND TEXT
+========================= */
+
+.brand-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+}
+
+.brand-card p{
+
+    color:#756658;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+    min-height:65px;
+}
+
+.brand-card:hover p{
+    color:#ddd;
+}
+
+.brand-label{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    background:#e8d0aa;
+
+    color:#5b2c14;
+
+    font-size:10px;
+
+    font-weight:600;
+}
+
+
+/* =========================
+   BRAND DECOR
+========================= */
+
+.brand-decor{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    opacity:.14;
+
+    animation:cupFloat 6s infinite ease-in-out;
+}
+
+.bd1{
+    left:-35px;
+    top:100px;
+}
+
+.bd2{
+    right:-35px;
+    top:250px;
+}
+
+.bd3{
+    left:45%;
+    bottom:-50px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#150704;
+
+    text-align:center;
+
+    padding:55px 20px;
+
+    color:white;
+}
+
+.footer-logo{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#efc66b;
+
+    font-size:48px;
+}
+
+footer p{
+
+    color:#999;
+
+    font-size:11px;
+
+    margin-top:8px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes pour{
+
+    0%,20%{
+        height:0;
+        opacity:0;
+    }
+
+    35%,75%{
+        height:60px;
+        opacity:1;
+    }
+
+    100%{
+        height:0;
+        opacity:0;
+    }
+}
+
+@keyframes beanFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(30deg);
+    }
+
+    50%{
+        transform:translateY(-25px) rotate(160deg);
+    }
+}
+
+@keyframes cupFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(-4deg);
+    }
+
+    50%{
+        transform:translateY(-15px) rotate(5deg);
+    }
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .brand-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .machine{
+        opacity:.25;
+    }
+
+    .shelf{
+        opacity:.25;
+    }
+}
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .script{
+        font-size:45px;
+    }
+
+    .machine,
+    .shelf{
+        display:none;
+    }
+
+    .brand-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+
+    .brand-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .nyc-sign{
+        font-size:8px;
+        letter-spacing:3px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     BACK TO MENU
+========================= -->
+
+<a href="menu.html" class="back-menu">
+    ← Back to Menu
+</a>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+
+    <!-- GLOW -->
+
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+
+
+    <!-- NYC BUILDINGS -->
+
+    <div class="building building-left">
+
+        <div class="window w1"></div>
+        <div class="window w2"></div>
+        <div class="window w3"></div>
+        <div class="window w4"></div>
+        <div class="window w5"></div>
+
+    </div>
+
+
+    <div class="building building-right">
+
+        <div class="window w6"></div>
+        <div class="window w7"></div>
+        <div class="window w8"></div>
+        <div class="window w9"></div>
+        <div class="window w10"></div>
+
+    </div>
+
+
+    <!-- HANGING LIGHTS -->
+
+    <div class="hanging-light light1"></div>
+    <div class="hanging-light light2"></div>
+    <div class="hanging-light light3"></div>
+    <div class="hanging-light light4"></div>
+
+
+    <!-- NYC SIGN -->
+
+    <div class="nyc-sign">
+        NEW YORK • COFFEE • EST. 2026
+    </div>
+
+
+    <!-- BEANS -->
+
+    <div class="bean bean1"></div>
+    <div class="bean bean2"></div>
+    <div class="bean bean3"></div>
+    <div class="bean bean4"></div>
+
+
+    <!-- DECOR CUPS -->
+
+    <div class="decor-cup cup1">☕</div>
+    <div class="decor-cup cup2">☕</div>
+
+
+    <!-- =========================
+         HERO TEXT
+    ========================== -->
+
+    <div class="hero-content">
+
+        <div class="script">
+            Brewed with passion
+        </div>
+
+        <h1>
+            The Coffee Corner
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            Welcome to the coffee world of
+            <strong>Maheen's Cafe and Bites.</strong>
+            <br>
+            Where every cup is freshly brewed,
+            beautifully served and made with love.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         COFFEE MACHINE
+    ========================== -->
+
+    <div class="machine">
+
+        <div class="machine-body">
+
+            <div class="machine-top">
+
+                <div class="screen"></div>
+
+                <div class="buttons">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="filter">
+
+                <div class="filter-handle"></div>
+
+            </div>
+
+
+            <div class="nozzle"></div>
+
+            <div class="stream"></div>
+
+            <div class="machine-cup"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         COFFEE SHELF
+    ========================== -->
+
+    <div class="shelf">
+
+        <div class="shelf-board one"></div>
+        <div class="shelf-board two"></div>
+        <div class="shelf-board three"></div>
+
+        <div class="jar jar1"></div>
+        <div class="jar jar2"></div>
+        <div class="jar jar3"></div>
+        <div class="jar jar4"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COFFEE BRANDS
+========================= -->
+
+<section class="brands">
+
+
+    <!-- DECORATIVE PHOTOS -->
+
+    <img
+        class="brand-decor bd1"
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80"
+        alt="Coffee">
+
+
+    <img
+        class="brand-decor bd2"
+        src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
+        alt="Coffee">
+
+
+    <img
+        class="brand-decor bd3"
+        src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=80"
+        alt="Coffee">
+
+
+
+    <div class="section-title">
+
+        <small>
+            OUR FAVOURITE COFFEE BRANDS
+        </small>
+
+        <h2>
+            Coffee <span>Brands</span>
+        </h2>
+
+        <p>
+            Famous coffee names loved by coffee lovers around the world.
+        </p>
+
+    </div>
+
+
+
+    <div class="brand-grid">
+
+
+        <!-- BRU -->
+
+        <div class="brand-card">
+
+            <div class="brand-image">
+
+                <!-- PUT YOUR BRU IMAGE HERE -->
+
+                <div class="placeholder">
+                    BRU<br>
+                    PICTURE
+                </div>
+
+            </div>
+
+            <h3>BRU</h3>
+
+            <p>
+                Rich and aromatic coffee with
+                a classic Indian taste.
+            </p>
+
+            <span class="brand-label">
+                Classic Coffee
+            </span>
+
+        </div>
+
+
+
+        <!-- NESCAFE -->
+
+        <div class="brand-card">
+
+            <div class="brand-image">
+
+                <!-- PUT YOUR NESCAFE IMAGE HERE -->
+
+                <div class="placeholder">
+                    NESCAFÉ<br>
+                    PICTURE
+                </div>
+
+            </div>
+
+            <h3>Nescafé</h3>
+
+            <p>
+                A world-famous coffee brand
+                with delicious coffee blends.
+            </p>
+
+            <span class="brand-label">
+                Instant Coffee
+            </span>
+
+        </div>
+
+
+
+        <!-- DAVIDOFF -->
+
+        <div class="brand-card">
+
+            <div class="brand-image">
+
+                <!-- PUT YOUR DAVIDOFF IMAGE HERE -->
+
+                <div class="placeholder">
+                    DAVIDOFF<br>
+                    PICTURE
+                </div>
+
+            </div>
+
+            <h3>Davidoff</h3>
+
+            <p>
+                Premium coffee with a refined
+                aroma and sophisticated taste.
+            </p>
+
+            <span class="brand-label">
+                Premium Coffee
+            </span>
+
+        </div>
+
+
+
+        <!-- STARBUCKS -->
+
+        <div class="brand-card">
+
+            <div class="brand-image">
+
+                <!-- PUT YOUR STARBUCKS IMAGE HERE -->
+
+                <div class="placeholder">
+                    STARBUCKS<br>
+                    PICTURE
+                </div>
+
+            </div>
+
+            <h3>Starbucks</h3>
+
+            <p>
+                One of the world's most famous
+                coffeehouse brands.
+            </p>
+
+            <span class="brand-label">
+                Coffeehouse
+            </span>
+
+        </div>
+
+
+
+        <!-- LAVAZZA -->
+
+        <div class="brand-card">
+
+            <div class="brand-image">
+
+                <!-- PUT YOUR LAVAZZA IMAGE HERE -->
+
+                <div class="placeholder">
+                    LAVAZZA<br>
+                    PICTURE
+                </div>
+
+            </div>
+
+            <h3>Lavazza</h3>
+
+            <p>
+                Italian coffee famous for its
+                rich espresso and aroma.
+            </p>
+
+            <span class="brand-label">
+                Italian Coffee
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Maheen's
+    </div>
+
+    <p>
+        CAFE AND BITES
+    </p>
+
+    <p>
+        Great Coffee • Good Food • Good Vibes
+    </p>
+
+    <p>
+        © 2026 Maheen's Cafe and Bites
+    </p>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maheen's Cafe and Bites | Specials</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#160905;
+    color:#fff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav{
+    height:78px;
+    width:100%;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    background:rgba(14,5,2,.95);
+
+    border-bottom:1px solid rgba(221,166,66,.35);
+
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    font-family:'Great Vibes',cursive;
+    font-size:35px;
+    color:#e9b957;
+}
+
+.logo span{
+    display:block;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:7px;
+
+    letter-spacing:3px;
+
+    text-align:center;
+
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:28px;
+    align-items:center;
+}
+
+nav ul a{
+    text-decoration:none;
+    color:#eee;
+    font-size:11px;
+    transition:.3s;
+}
+
+nav ul a:hover{
+    color:#e9b957;
+}
+
+.back{
+    border:1px solid #dca947;
+    padding:10px 18px;
+    border-radius:25px;
+    color:#e9b957 !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:690px;
+
+    padding-top:78px;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(18,6,2,.95) 0%,
+        rgba(18,6,2,.72) 42%,
+        rgba(18,6,2,.35) 100%
+    ),
+
+    url("coffee-specials.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+/* golden glow */
+
+.hero:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:#c88928;
+
+    filter:blur(160px);
+
+    opacity:.12;
+
+    right:10%;
+
+    top:20%;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content{
+
+    width:50%;
+
+    margin-left:7%;
+
+    position:relative;
+
+    z-index:5;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.script{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:60px;
+
+    color:#edc365;
+
+    margin-bottom:0;
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:78px;
+
+    line-height:1;
+
+    color:#fff;
+
+    margin-bottom:25px;
+}
+
+.line{
+
+    width:130px;
+
+    height:3px;
+
+    background:#e5b251;
+
+    margin:25px 0;
+}
+
+.hero p{
+
+    color:#d6cbc4;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    max-width:550px;
+}
+
+
+/* ================= HAPPY HOURS ================= */
+
+.happy{
+
+    margin-top:35px;
+
+    width:290px;
+
+    padding:20px;
+
+    border:1px solid #b57a28;
+
+    border-radius:12px;
+
+    background:rgba(30,11,3,.72);
+
+    box-shadow:
+    0 0 30px rgba(214,157,52,.08);
+}
+
+.happy h3{
+
+    color:#edbd59;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:19px;
+
+    margin-bottom:5px;
+}
+
+.happy p{
+
+    font-size:11px;
+
+    color:#ddd;
+}
+
+.discount{
+
+    color:#edbd59;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    margin-top:8px;
+}
+
+
+/* ================= FLOATING BEANS ================= */
+
+.bean{
+
+    position:absolute;
+
+    width:25px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:#633015;
+
+    opacity:.75;
+
+    transform:rotate(35deg);
+
+    animation:float 6s infinite ease-in-out;
+}
+
+.bean:after{
+
+    content:"";
+
+    position:absolute;
+
+    left:10px;
+
+    top:5px;
+
+    width:3px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:#a55c2d;
+}
+
+.bean1{
+    top:20%;
+    right:5%;
+}
+
+.bean2{
+    top:45%;
+    right:30%;
+    animation-delay:1s;
+}
+
+.bean3{
+    bottom:12%;
+    left:5%;
+    animation-delay:2s;
+}
+
+.bean4{
+    bottom:25%;
+    right:8%;
+    animation-delay:3s;
+}
+
+
+/* ================= SECTION ================= */
+
+.special-section{
+
+    padding:100px 7%;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #3a190b,
+        #160905 65%
+    );
+}
+
+.heading{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.heading small{
+
+    letter-spacing:5px;
+
+    color:#c58a36;
+
+    font-size:10px;
+}
+
+.heading h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:48px;
+
+    margin-top:10px;
+}
+
+.heading h2 span{
+
+    color:#d8a447;
+}
+
+.heading p{
+
+    color:#a99a90;
+
+    font-size:12px;
+
+    margin-top:10px;
+}
+
+
+/* ================= CARDS ================= */
+
+.cards{
+
+    max-width:1350px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+.card{
+
+    background:
+    linear-gradient(
+        145deg,
+        #291209,
+        #170805
+    );
+
+    border:1px solid rgba(205,148,55,.35);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.3);
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#d9a644;
+
+    box-shadow:
+    0 20px 50px rgba(218,163,63,.12);
+}
+
+.card-img{
+
+    height:240px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.card-img img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+}
+
+
+/* badge */
+
+.badge{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    z-index:5;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    background:#c78d2c;
+
+    color:#180902;
+
+    font-size:9px;
+
+    font-weight:bold;
+}
+
+
+/* card info */
+
+.info{
+
+    padding:23px;
+}
+
+.info h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:23px;
+
+    color:#f2dfc5;
+
+    margin-bottom:8px;
+}
+
+.info p{
+
+    color:#a99b91;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    min-height:40px;
+}
+
+.bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:18px;
+}
+
+.price{
+
+    color:#e5b153;
+
+    font-size:21px;
+
+    font-weight:600;
+}
+
+.old{
+
+    color:#75665e;
+
+    font-size:11px;
+
+    text-decoration:line-through;
+
+    margin-left:6px;
+}
+
+.order{
+
+    text-decoration:none;
+
+    color:#e9b958;
+
+    border:1px solid #a8762c;
+
+    padding:9px 16px;
+
+    border-radius:20px;
+
+    font-size:9px;
+
+    transition:.3s;
+}
+
+.order:hover{
+
+    background:#e0aa4a;
+
+    color:#180902;
+}
+
+
+/* ================= BRU FEATURE ================= */
+
+.bru-section{
+
+    min-height:480px;
+
+    margin:80px auto;
+
+    max-width:1300px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(15,5,1,.97),
+        rgba(15,5,1,.6),
+        rgba(15,5,1,.3)
+    ),
+
+    url("bru-background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border:1px solid #865b24;
+}
+
+.bru-content{
+
+    padding:60px;
+
+    max-width:620px;
+}
+
+.bru-script{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#e8b653;
+
+    font-size:55px;
+}
+
+.bru-content h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:43px;
+
+    margin:5px 0 15px;
+}
+
+.bru-content p{
+
+    color:#c9bbb0;
+
+    font-size:12px;
+
+    line-height:2;
+}
+
+.bru-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:12px 25px;
+
+    border:1px solid #d5a347;
+
+    border-radius:25px;
+
+    color:#e8b653;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    transition:.3s;
+}
+
+.bru-btn:hover{
+
+    background:#dca949;
+
+    color:#180902;
+}
+
+
+/* ================= COMBO ================= */
+
+.combo{
+
+    max-width:1200px;
+
+    margin:100px auto;
+
+    padding:65px 30px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    border:1px solid #a9772d;
+
+    background:
+
+    linear-gradient(
+        rgba(30,10,3,.82),
+        rgba(30,10,3,.9)
+    ),
+
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=85");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.combo-script{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:58px;
+
+    color:#edc15d;
+}
+
+.combo h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:40px;
+}
+
+.combo p{
+
+    color:#c6b9ad;
+
+    font-size:12px;
+
+    margin-top:10px;
+
+    line-height:2;
+}
+
+.combo-price{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:12px 30px;
+
+    border:1px solid #e1ad4d;
+
+    border-radius:25px;
+
+    color:#edbd58;
+
+    font-size:15px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:#0d0301;
+
+    border-top:1px solid #3a210e;
+}
+
+.footer-logo{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#e8b554;
+
+    font-size:50px;
+}
+
+footer p{
+
+    color:#776b63;
+
+    font-size:10px;
+
+    margin-top:8px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0) rotate(35deg);
+    }
+
+    50%{
+        transform:translateY(-30px) rotate(120deg);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero-content{
+        width:90%;
+        margin:auto;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .script{
+        font-size:50px;
+    }
+
+    .line{
+        margin:25px auto;
+    }
+
+    .happy{
+        margin:30px auto;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .bru-content{
+        padding:35px;
+    }
+
+    .bru-content h2{
+        font-size:32px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        Maheen's
+
+        <span>CAFE AND BITES</span>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="menu.html">MENU</a>
+        </li>
+
+        <li>
+            <a href="coffee.html">COFFEE</a>
+        </li>
+
+        <li>
+            <a href="specials.html">SPECIALS</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="menu.html" class="back">
+                ← BACK TO MENU
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- FLOATING BEANS -->
+
+<div class="bean bean1"></div>
+<div class="bean bean2"></div>
+<div class="bean bean3"></div>
+<div class="bean bean4"></div>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="script">
+            Today's
+        </div>
+
+        <h1>
+            Specials
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            Handcrafted with love,
+            brewed to perfection.
+            Discover our special coffee,
+            delicious bites and exclusive offers.
+        </p>
+
+
+        <div class="happy">
+
+            <h3>
+                ⏰ HAPPY HOURS
+            </h3>
+
+            <p>
+                Every Monday – Friday
+                <br>
+                4:00 PM – 7:00 PM
+            </p>
+
+            <div class="discount">
+                GET 20% OFF
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SPECIAL ITEMS ================= -->
+
+<section class="special-section">
+
+    <div class="heading">
+
+        <small>
+            MAHEEN'S SIGNATURE
+        </small>
+
+        <h2>
+            Chef's <span>Special Selection</span>
+        </h2>
+
+        <p>
+            Our most loved coffee and bites.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <div class="card-img">
+
+                <div class="badge">
+                    BEST SELLER
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=900&q=90">
+
+            </div>
+
+            <div class="info">
+
+                <h3>
+                    Signature Bru Latte
+                </h3>
+
+                <p>
+                    Smooth and creamy latte made
+                    with rich Bru coffee and steamed milk.
+                </p>
+
+                <div class="bottom">
+
+                    <div class="price">
+                        ₹149
+                        <span class="old">₹199</span>
+                    </div>
+
+                    <a href="#" class="order">
+                        ORDER NOW →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <div class="card-img">
+
+                <div class="badge">
+                    20% OFF
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=90">
+
+            </div>
+
+            <div class="info">
+
+                <h3>
+                    Iced Caramel Bru
+                </h3>
+
+                <p>
+                    Chilled Bru coffee blended with
+                    caramel and a touch of cream.
+                </p>
+
+                <div class="bottom">
+
+                    <div class="price">
+                        ₹179
+                        <span class="old">₹225</span>
+                    </div>
+
+                    <a href="#" class="order">
+                        ORDER NOW →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <div class="card-img">
+
+                <div class="badge">
+                    CHEF'S PICK
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=90">
+
+            </div>
+
+            <div class="info">
+
+                <h3>
+                    Grilled Veg Sandwich
+                </h3>
+
+                <p>
+                    Crispy grilled sandwich loaded
+                    with fresh vegetables and cheese.
+                </p>
+
+                <div class="bottom">
+
+                    <div class="price">
+                        ₹199
+                        <span class="old">₹240</span>
+                    </div>
+
+                    <a href="#" class="order">
+                        ORDER NOW →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="card">
+
+            <div class="card-img">
+
+                <div class="badge">
+                    NEW
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=90">
+
+            </div>
+
+            <div class="info">
+
+                <h3>
+                    Chocolate Fudge Cake
+                </h3>
+
+                <p>
+                    Moist chocolate cake topped
+                    with rich chocolate fudge.
+                </p>
+
+                <div class="bottom">
+
+                    <div class="price">
+                        ₹199
+                        <span class="old">₹250</span>
+                    </div>
+
+                    <a href="#" class="order">
+                        ORDER NOW →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 5 -->
+
+        <div class="card">
+
+            <div class="card-img">
+
+                <div class="badge">
+                    25% OFF
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=90">
+
+            </div>
+
+            <div class="info">
+
+                <h3>
+                    Classic Bru Burger
+                </h3>
+
+                <p>
+                    Juicy burger with fresh vegetables,
+                    cheese and special sauce.
+                </p>
+
+                <div class="bottom">
+
+                    <div class="price">
+                        ₹229
+                        <span class="old">₹299</span>
+                    </div>
+
+                    <a href="#" class="order">
+                        ORDER NOW →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 6 -->
+
+        <div class="card">
+
+            <div class="card-img">
+
+                <div class="badge">
+                    POPULAR
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=90">
+
+            </div>
+
+            <div class="info">
+
+                <h3>
+                    Bru Cold Coffee
+                </h3>
+
+                <p>
+                    Refreshing cold coffee made with
+                    Bru, milk and ice cream.
+                </p>
+
+                <div class="bottom">
+
+                    <div class="price">
+                        ₹159
+                        <span class="old">₹200</span>
+                    </div>
+
+                    <a href="#" class="order">
+                        ORDER NOW →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= BRU SECTION ================= -->
+
+    <div class="bru-section">
+
+        <div class="bru-content">
+
+            <div class="bru-script">
+                Brewed with Bru
+            </div>
+
+            <h2>
+                Rich Aroma.
+                <br>
+                Perfect Coffee.
+            </h2>
+
+            <p>
+                At Maheen's Cafe and Bites,
+                we love creating delicious coffee
+                using rich and aromatic Bru coffee.
+                Every cup is prepared fresh
+                and served with love.
+            </p>
+
+            <a href="coffee.html" class="bru-btn">
+                EXPLORE OUR COFFEE →
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= COMBO ================= -->
+
+    <div class="combo">
+
+        <div class="combo-script">
+            Perfect Pair
+        </div>
+
+        <h2>
+            COFFEE & DESSERT COMBO
+        </h2>
+
+        <p>
+            Any hot coffee + any dessert
+            <br>
+            Perfect for your coffee date,
+            evening break or sweet craving.
+        </p>
+
+        <div class="combo-price">
+            ONLY ₹299
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Maheen's
+    </div>
+
+    <p>
+        CAFE AND BITES
+    </p>
+
+    <p>
+        Great Coffee • Delicious Bites • Good Vibes
+    </p>
+
+    <p>
+        © 2026 Maheen's Cafe and Bites
+    </p>
+
+</footer>
+
+
+</body>
+</html>

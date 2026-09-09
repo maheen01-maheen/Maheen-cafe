@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maheen's Cafe and Bites | Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#120604;
+    color:white;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 6%;
+
+    background:rgba(18,5,2,.94);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(226,177,78,.35);
+
+    z-index:1000;
+}
+
+.logo{
+    font-family:"Great Vibes",cursive;
+    font-size:36px;
+    color:#edc05f;
+}
+
+.logo small{
+    display:block;
+    font-family:Poppins,sans-serif;
+    font-size:7px;
+    letter-spacing:4px;
+    text-align:center;
+    color:white;
+    margin-top:-8px;
+}
+
+nav ul{
+    display:flex;
+    gap:27px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:10px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#edc05f;
+}
+
+.back{
+    border:1px solid #c9983b;
+    padding:9px 16px;
+    border-radius:25px;
+    color:#edc05f !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    height:680px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(20,6,2,.63),
+        rgba(20,6,2,.91)
+    ),
+
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+
+/* GOLDEN GLOW */
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:#d49b38;
+
+    filter:blur(160px);
+
+    opacity:.18;
+
+    right:-100px;
+    top:100px;
+}
+
+
+/* HERO TEXT */
+
+.hero-content{
+    position:relative;
+    z-index:5;
+}
+
+.script{
+    font-family:"Great Vibes",cursive;
+    font-size:72px;
+    color:#efc664;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:82px;
+    letter-spacing:2px;
+}
+
+.line{
+    width:130px;
+    height:3px;
+    background:#e5b554;
+    margin:25px auto;
+}
+
+.hero p{
+    max-width:650px;
+    color:#d8cbc1;
+    font-size:13px;
+    line-height:2;
+}
+
+
+/* ================= FLOATING COFFEE BEANS ================= */
+
+.bean{
+    position:absolute;
+
+    width:25px;
+    height:38px;
+
+    background:#713617;
+
+    border-radius:50%;
+
+    transform:rotate(40deg);
+
+    animation:float 6s infinite ease-in-out;
+
+    opacity:.8;
+}
+
+.bean::after{
+    content:"";
+
+    position:absolute;
+
+    width:3px;
+    height:28px;
+
+    background:#ad6430;
+
+    left:10px;
+    top:5px;
+
+    border-radius:50%;
+}
+
+.bean1{
+    left:6%;
+    top:25%;
+}
+
+.bean2{
+    right:7%;
+    top:32%;
+    animation-delay:1s;
+}
+
+.bean3{
+    left:13%;
+    bottom:20%;
+    animation-delay:2s;
+}
+
+.bean4{
+    right:18%;
+    bottom:18%;
+    animation-delay:3s;
+}
+
+
+/* ================= GALLERY AREA ================= */
+
+.gallery-area{
+
+    padding:100px 6%;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #3b1a0c,
+        #120604 70%
+    );
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.heading small{
+    color:#c98c36;
+    letter-spacing:5px;
+    font-size:10px;
+}
+
+.heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:50px;
+    margin-top:10px;
+}
+
+.heading h2 span{
+    color:#dba74d;
+}
+
+.heading p{
+    color:#9f9087;
+    font-size:12px;
+    margin-top:10px;
+}
+
+
+/* ================= GALLERY GRID ================= */
+
+.gallery{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    grid-auto-rows:250px;
+
+    gap:18px;
+}
+
+.pic{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    border:1px solid rgba(218,163,64,.35);
+
+    box-shadow:
+    0 20px 35px rgba(0,0,0,.4);
+
+    background:#241007;
+}
+
+.pic img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s;
+}
+
+.pic:hover img{
+    transform:scale(1.12);
+}
+
+
+/* DARK HOVER */
+
+.pic::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.85)
+    );
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.pic:hover::after{
+    opacity:1;
+}
+
+
+/* CAPTION */
+
+.caption{
+
+    position:absolute;
+
+    bottom:20px;
+    left:23px;
+
+    z-index:5;
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:.4s;
+}
+
+.pic:hover .caption{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+.caption h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:22px;
+}
+
+.caption p{
+
+    color:#d6c3b1;
+
+    font-size:9px;
+
+    margin-top:4px;
+}
+
+
+/* SPECIAL SIZES */
+
+.pic:nth-child(1){
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.pic:nth-child(4){
+    grid-row:span 2;
+}
+
+.pic:nth-child(7){
+    grid-column:span 2;
+}
+
+
+/* ================= BRU SECTION ================= */
+
+.bru{
+
+    max-width:1350px;
+
+    min-height:470px;
+
+    margin:100px auto;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(18,5,1,.96),
+        rgba(18,5,1,.65),
+        rgba(18,5,1,.25)
+    ),
+
+    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid #805821;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.45);
+}
+
+.bru-content{
+    padding:65px;
+    max-width:650px;
+}
+
+.bru-script{
+    font-family:"Great Vibes",cursive;
+    font-size:60px;
+    color:#edc15e;
+}
+
+.bru h2{
+    font-family:"Playfair Display",serif;
+    font-size:44px;
+    margin:5px 0 18px;
+}
+
+.bru p{
+    color:#cbbdb2;
+    font-size:12px;
+    line-height:2;
+}
+
+
+/* ================= COFFEE MACHINE ================= */
+
+.machine{
+
+    max-width:1350px;
+
+    margin:100px auto;
+
+    min-height:460px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(15,4,2,.95),
+        rgba(15,4,2,.55),
+        rgba(15,4,2,.15)
+    ),
+
+    url("https://images.unsplash.com/photo-1522992319-0365e5f11656?auto=format&fit=crop&w=1800&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid #76511f;
+}
+
+.machine-content{
+
+    width:52%;
+
+    padding:60px;
+}
+
+.machine-script{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:58px;
+
+    color:#efc261;
+}
+
+.machine h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:42px;
+
+    margin:5px 0 15px;
+}
+
+.machine p{
+
+    color:#c4b4a8;
+
+    font-size:12px;
+
+    line-height:2;
+}
+
+
+/* ================= NYC CAFÉ ================= */
+
+.nyc{
+
+    padding:100px 7%;
+
+    background:#f2e3d1;
+
+    color:#251107;
+
+    text-align:center;
+}
+
+.nyc small{
+
+    color:#a56b29;
+
+    letter-spacing:5px;
+
+    font-size:10px;
+}
+
+.nyc h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:45px;
+
+    margin:12px 0;
+}
+
+.nyc h2 span{
+    color:#a86c29;
+}
+
+.nyc p{
+
+    color:#756557;
+
+    font-size:12px;
+
+    max-width:600px;
+
+    margin:auto;
+
+    line-height:2;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#0b0301;
+
+    text-align:center;
+
+    padding:65px 20px;
+
+    border-top:1px solid #38200d;
+}
+
+.footer-logo{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:52px;
+
+    color:#e8b656;
+}
+
+footer p{
+
+    color:#756960;
+
+    font-size:10px;
+
+    margin-top:8px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0) rotate(40deg);
+    }
+
+    50%{
+        transform:translateY(-30px) rotate(110deg);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .script{
+        font-size:52px;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .machine-content{
+        width:70%;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .gallery{
+        grid-template-columns:1fr;
+        grid-auto-rows:270px;
+    }
+
+    .pic:nth-child(1),
+    .pic:nth-child(7){
+        grid-column:span 1;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .machine-content{
+        width:100%;
+        padding:35px;
+    }
+
+    .bru-content{
+        padding:35px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        Maheen's
+
+        <small>CAFE AND BITES</small>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="menu.html">MENU</a>
+        </li>
+
+        <li>
+            <a href="coffee.html">COFFEE</a>
+        </li>
+
+        <li>
+            <a href="specials.html">SPECIALS</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">GALLERY</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- FLOATING BEANS -->
+
+<div class="bean bean1"></div>
+<div class="bean bean2"></div>
+<div class="bean bean3"></div>
+<div class="bean bean4"></div>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="script">
+            A Taste of
+        </div>
+
+        <h1>
+            Maheen's Gallery
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            Coffee, conversations, delicious bites and
+            beautiful moments — welcome to the world
+            of Maheen's Cafe and Bites.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery-area">
+
+    <div class="heading">
+
+        <small>
+            COFFEE • BITES • MOMENTS
+        </small>
+
+        <h2>
+            Our <span>Coffee World</span>
+        </h2>
+
+        <p>
+            Every picture tells a delicious story.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <!-- 1 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=90">
+
+            <div class="caption">
+
+                <h3>Perfect Coffee</h3>
+
+                <p>Freshly brewed with love</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=90">
+
+            <div class="caption">
+
+                <h3>Morning Brew</h3>
+
+                <p>Start your day beautifully</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=90">
+
+            <div class="caption">
+
+                <h3>Coffee Beans</h3>
+
+                <p>Rich aroma & flavour</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=1000&q=90">
+
+            <div class="caption">
+
+                <h3>Our Coffee Machine</h3>
+
+                <p>Where the magic begins</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=90">
+
+            <div class="caption">
+
+                <h3>Classic Coffee</h3>
+
+                <p>Simple. Rich. Perfect.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=90">
+
+            <div class="caption">
+
+                <h3>Latte Art</h3>
+
+                <p>Made by our baristas</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1200&q=90">
+
+            <div class="caption">
+
+                <h3>Café Vibes</h3>
+
+                <p>Relax • Sip • Enjoy</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=90">
+
+            <div class="caption">
+
+                <h3>Sweet Treats</h3>
+
+                <p>Something delicious</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="pic">
+
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=90">
+
+            <div class="caption">
+
+                <h3>Freshly Baked</h3>
+
+                <p>Golden & delicious</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= BRU FEATURE ================= -->
+
+    <div class="bru">
+
+        <div class="bru-content">
+
+            <div class="bru-script">
+                Brewed with Bru
+            </div>
+
+            <h2>
+                The Rich Taste
+                <br>
+                You Love
+            </h2>
+
+            <p>
+                From the first aroma to the final sip,
+                coffee at Maheen's is all about rich
+                flavour, creamy texture and unforgettable
+                café moments.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= COFFEE MACHINE ================= -->
+
+    <div class="machine">
+
+        <div class="machine-content">
+
+            <div class="machine-script">
+                Behind Every Cup
+            </div>
+
+            <h2>
+                Where Coffee
+                <br>
+                Comes Alive
+            </h2>
+
+            <p>
+                Watch our professional coffee machine
+                transform freshly prepared coffee into
+                your favourite cappuccino, latte,
+                espresso and cold coffee.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= NYC STYLE ================= -->
+
+<section class="nyc">
+
+    <small>
+        MAHEEN'S CAFE EXPERIENCE
+    </small>
+
+    <h2>
+        A Little Taste of <span>New York</span>
+    </h2>
+
+    <p>
+        Warm lights, beautiful coffee machines,
+        rich coffee aromas and the energy of a
+        modern NYC café — all brought together
+        at Maheen's Cafe and Bites.
+    </p>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Maheen's
+    </div>
+
+    <p>
+        CAFE AND BITES
+    </p>
+
+    <p>
+        Great Coffee • Delicious Bites • Good Vibes
+    </p>
+
+    <p>
+        © 2026 Maheen's Cafe and Bites
+    </p>
+
+</footer>
+
+
+</body>
+</html>

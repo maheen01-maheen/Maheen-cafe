@@ -1,0 +1,1162 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maheen's Cafe and Bites</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8f0e3;
+            color: #2d1b12;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            height: 82px;
+            background: #1b0d06;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            border-bottom: 1px solid #d3a24c;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #f5c879;
+        }
+
+        .coffee-logo {
+            font-size: 30px;
+        }
+
+        .brand-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 38px;
+            font-weight: 400;
+            line-height: 35px;
+        }
+
+        .brand-subtitle {
+            display: block;
+            font-family: Arial, sans-serif;
+            color: white;
+            font-size: 9px;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #f5c879;
+        }
+
+        .visit-btn {
+            text-decoration: none;
+            background: #f5c879;
+            color: #24140b;
+            padding: 13px 21px;
+            border-radius: 25px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .visit-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 680px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(25, 12, 5, 0.98) 0%,
+                    rgba(40, 19, 8, 0.90) 38%,
+                    rgba(40, 19, 8, 0.55) 68%,
+                    rgba(0, 0, 0, 0.30)
+                ),
+                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=90");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* Decorative circles */
+
+        .circle1,
+        .circle2,
+        .circle3 {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(245, 200, 121, 0.35);
+        }
+
+        .circle1 {
+            width: 500px;
+            height: 500px;
+            right: -190px;
+            top: -140px;
+        }
+
+        .circle2 {
+            width: 320px;
+            height: 320px;
+            right: 30px;
+            bottom: -180px;
+        }
+
+        .circle3 {
+            width: 180px;
+            height: 180px;
+            left: -90px;
+            bottom: 30px;
+        }
+
+
+        /* Hero Content */
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            margin-left: 8%;
+            max-width: 720px;
+            color: white;
+        }
+
+        .welcome {
+            font-family: 'Great Vibes', cursive;
+            color: #f5c879;
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 76px;
+            line-height: 0.95;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 .script {
+            font-family: 'Great Vibes', cursive;
+            color: white;
+            font-size: 100px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 .gold {
+            color: #f5c879;
+        }
+
+        .coffee-line {
+            width: 190px;
+            height: 2px;
+            background: #f5c879;
+            margin-bottom: 22px;
+        }
+
+        .tagline {
+            font-family: Arial, sans-serif;
+            font-size: 19px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+
+        .description {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 520px;
+            color: #eee;
+            margin-bottom: 30px;
+        }
+
+
+        /* Buttons */
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu-btn {
+            text-decoration: none;
+            background: #f5c879;
+            color: #28150a;
+            padding: 16px 29px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .menu-btn:hover {
+            background: white;
+            transform: translateY(-4px);
+        }
+
+        .learn-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid #f5c879;
+            padding: 16px 29px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+        }
+
+        .learn-btn:hover {
+            background: #f5c879;
+            color: #28150a;
+        }
+
+
+        /* Neon Text */
+
+        .neon {
+            position: absolute;
+            right: 9%;
+            top: 28%;
+
+            color: #fff5d4;
+            font-family: 'Great Vibes', cursive;
+            font-size: 42px;
+            line-height: 1.3;
+            text-align: center;
+
+            text-shadow:
+                0 0 5px white,
+                0 0 15px #f5c879,
+                0 0 30px #f5a623;
+        }
+
+
+        /* ================= FEATURES ================= */
+
+        .features {
+            background: #fffaf2;
+            padding: 42px 7%;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .feature {
+            padding: 15px;
+            border-right: 1px solid #dfceb8;
+        }
+
+        .feature:last-child {
+            border: none;
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            background: #173c31;
+            color: #f5c879;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: auto;
+            font-size: 23px;
+        }
+
+        .feature h3 {
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            font-family: Arial, sans-serif;
+            color: #765b48;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+        /* ================= POPULAR ================= */
+
+        .popular {
+            padding: 80px 7%;
+            text-align: center;
+        }
+
+        .small-title {
+            color: #b87924;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .popular h2 {
+            font-size: 46px;
+            margin: 12px 0 40px;
+        }
+
+        .popular h2 span {
+            color: #c18a3d;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(50, 30, 15, 0.12);
+
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 17px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #765b48;
+            line-height: 1.5;
+            min-height: 40px;
+        }
+
+        .price {
+            color: #9b5b20;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .full-menu {
+            display: inline-block;
+            margin-top: 35px;
+
+            background: #173c31;
+            color: white;
+
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #12362c;
+            color: white;
+
+            padding: 75px 7%;
+
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 48%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 390px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+            border: 4px solid #d8a65c;
+        }
+
+        .about-content {
+            width: 52%;
+        }
+
+        .about-content .small-title {
+            color: #f5c879;
+        }
+
+        .about-content h2 {
+            font-size: 45px;
+            margin: 15px 0 20px;
+        }
+
+        .about-content h2 span {
+            color: #f5c879;
+        }
+
+        .about-content p {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            color: #e5e5e5;
+            margin-bottom: 18px;
+        }
+
+        .details {
+            margin-top: 25px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .detail {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .detail strong {
+            color: #f5c879;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #1b0d06;
+            color: white;
+
+            padding: 30px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer h3 {
+            color: #f5c879;
+        }
+
+        footer p {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #bbb;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .neon {
+                display: none;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            nav {
+                height: auto;
+                padding: 18px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 620px;
+            }
+
+            .hero-content {
+                margin: 0 7%;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero h1 .script {
+                font-size: 70px;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-content {
+                width: 100%;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .brand-name {
+                font-size: 30px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h1 .script {
+                font-size: 58px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .features,
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .details {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <div class="coffee-logo">☕</div>
+
+            <div>
+                <div class="brand-name">Maheen’s</div>
+                <span class="brand-subtitle">CAFE AND BITES</span>
+            </div>
+
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="index.html" class="active">Home</a>
+            </li>
+
+            <li>
+                <a href="menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+                <a href="coffee.html">Coffee</a>
+            </li>
+
+            <li>
+                <a href="specials.html">Specials</a>
+            </li>
+
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+
+            <li>
+                <a href="reviews.html">Reviews</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+
+        <a href="contact.html" class="visit-btn">
+            📍 Visit Us
+        </a>
+
+    </nav>
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+
+
+        <div class="hero-content">
+
+            <div class="welcome">
+                Welcome to
+            </div>
+
+
+            <h1>
+
+                <span class="script">
+                    Maheen’s
+                </span>
+
+                <br>
+
+                <span class="gold">
+                    Cafe and Bites
+                </span>
+
+            </h1>
+
+
+            <div class="coffee-line"></div>
+
+
+            <div class="tagline">
+
+                Great Coffee
+                &nbsp; • &nbsp;
+                Good Food
+                &nbsp; • &nbsp;
+                Good Vibes
+
+            </div>
+
+
+            <p class="description">
+
+                A cozy place where every cup tells a story
+                and every bite brings a smile. Come relax,
+                enjoy delicious food and discover your
+                perfect cup of coffee.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="menu.html" class="menu-btn">
+                    ☕ Explore Our Menu
+                </a>
+
+                <a href="about.html" class="learn-btn">
+                    Discover More →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Decorative Neon -->
+
+        <div class="neon">
+
+            Good Coffee<br>
+            Good Food<br>
+            Great Mood ♡
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+
+        <div class="feature">
+
+            <div class="icon">
+                🌿
+            </div>
+
+            <h3>
+                Premium Beans
+            </h3>
+
+            <p>
+                Handpicked from the finest coffee farms.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                ☕
+            </div>
+
+            <h3>
+                Expertly Brewed
+            </h3>
+
+            <p>
+                Brewing perfection in every single cup.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                🍰
+            </div>
+
+            <h3>
+                Tasty Bites
+            </h3>
+
+            <p>
+                Delicious food made with love and freshness.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                ♡
+            </div>
+
+            <h3>
+                Cozy Ambience
+            </h3>
+
+            <p>
+                A warm and welcoming space for everyone.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= POPULAR PICKS ================= -->
+
+    <section class="popular">
+
+        <div class="small-title">
+            OUR POPULAR PICKS ☕
+        </div>
+
+
+        <h2>
+            Sip. Savor. <span>Enjoy.</span>
+        </h2>
+
+
+        <div class="cards">
+
+
+            <!-- Cappuccino -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80"
+                    alt="Cappuccino"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Cappuccino
+                    </h3>
+
+                    <p>
+                        A perfect blend of espresso,
+                        steamed milk and foam.
+                    </p>
+
+                    <div class="price">
+                        ₹149
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Iced Latte -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80"
+                    alt="Iced Latte"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Iced Latte
+                    </h3>
+
+                    <p>
+                        Smooth espresso with
+                        chilled milk over ice.
+                    </p>
+
+                    <div class="price">
+                        ₹169
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Brownie -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+                    alt="Chocolate Brownie"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Choco Brownie
+                    </h3>
+
+                    <p>
+                        Warm brownie with ice cream
+                        and chocolate drizzle.
+                    </p>
+
+                    <div class="price">
+                        ₹189
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sandwich -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+                    alt="Cheesy Sandwich"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Cheesy Sandwich
+                    </h3>
+
+                    <p>
+                        Grilled to perfection with
+                        cheese and fresh veggies.
+                    </p>
+
+                    <div class="price">
+                        ₹159
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Chocolate Shake -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
+                    alt="Chocolate Shake"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Chocolate Shake
+                    </h3>
+
+                    <p>
+                        Rich, creamy and
+                        totally irresistible.
+                    </p>
+
+                    <div class="price">
+                        ₹139
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="menu.html" class="full-menu">
+            View Full Menu →
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about">
+
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=90"
+                alt="Maheen's Cafe"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="small-title">
+                ABOUT US
+            </div>
+
+
+            <h2>
+                More Than Just
+                <span>a Cafe</span>
+            </h2>
+
+
+            <p>
+
+                At Maheen’s Cafe and Bites, we believe
+                in creating moments. From the rich aroma
+                of freshly brewed coffee to delicious bites
+                that satisfy your cravings, every detail is
+                crafted with passion.
+
+            </p>
+
+
+            <p>
+
+                Whether you're meeting friends, studying,
+                working or simply enjoying some quiet time,
+                our café is the perfect place to relax and enjoy.
+
+            </p>
+
+
+            <div class="details">
+
+
+                <div class="detail">
+
+                    <strong>
+                        🕐 Opening Hours
+                    </strong>
+
+                    Mon – Sun : 8:00 AM – 10:00 PM
+
+                </div>
+
+
+                <div class="detail">
+
+                    <strong>
+                        📍 Location
+                    </strong>
+
+                    123 Coffee Lane, Your City
+
+                </div>
+
+
+                <div class="detail">
+
+                    <strong>
+                        📞 Call Us
+                    </strong>
+
+                    +91 98765 43210
+
+                </div>
+
+
+                <div class="detail">
+
+                    <strong>
+                        ♡ Follow Us
+                    </strong>
+
+                    Instagram • Facebook
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            ☕ Maheen’s Cafe and Bites
+        </h3>
+
+        <p>
+            © 2026 Maheen’s Cafe and Bites. All Rights Reserved.
+        </p>
+
+        <p>
+            Made with ❤️ for coffee lovers
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
+<section class="hero">
+    <div class="hero-content">
+        <p class="welcome">Welcome to</p>
+        <h1>MAHEEN'S</h1>
+        <h2>CAFE & BITES</h2>
+
+        <p>Good Coffee, Good Mood ☕❤️</p>
+
+        <a href="menu.html" class="hero-btn">Explore Our Menu</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/maheen-cafe.jpg" alt="Maheen's Cafe Barista">
+    </div>
+</section>

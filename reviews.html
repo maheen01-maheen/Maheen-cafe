@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reviews | Maheen's Cafe and Bites</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#120704;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* NAVIGATION */
+
+nav{
+    height:75px;
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 6%;
+
+    background:rgba(18,7,4,.95);
+    border-bottom:1px solid #8d6228;
+}
+
+.logo{
+    font-family:'Great Vibes',cursive;
+    font-size:38px;
+    color:#e9b64e;
+}
+
+.logo small{
+    display:block;
+    font-family:Poppins,sans-serif;
+    font-size:7px;
+    letter-spacing:4px;
+    text-align:center;
+    color:white;
+    margin-top:-8px;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:10px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e9b64e;
+}
+
+.home{
+    border:1px solid #c9983c;
+    padding:9px 18px;
+    border-radius:25px;
+    color:#e9b64e;
+}
+
+
+/* HERO */
+
+.hero{
+    height:650px;
+    padding-top:75px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(20,7,4,.55),
+        rgba(20,7,4,.93)
+    ),
+    url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    animation:appear 1.5s ease;
+}
+
+.subtitle{
+    color:#e3ae45;
+    letter-spacing:6px;
+    font-size:11px;
+}
+
+.script{
+    font-family:'Great Vibes',cursive;
+    font-size:75px;
+    color:#efc35d;
+    margin-top:10px;
+    text-shadow:0 0 20px #9b681f;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:70px;
+}
+
+.hero h1 span{
+    color:#dca53e;
+}
+
+.line{
+    width:120px;
+    height:3px;
+    background:#dba53e;
+    margin:25px auto;
+    box-shadow:0 0 15px #dba53e;
+}
+
+.hero p{
+    max-width:600px;
+    margin:auto;
+    color:#d5c5ba;
+    font-size:12px;
+    line-height:2;
+}
+
+
+/* COFFEE CUP */
+
+.cup{
+    position:absolute;
+    right:12%;
+    bottom:90px;
+
+    width:110px;
+    height:65px;
+
+    background:#eee;
+    border-radius:8px 8px 35px 35px;
+
+    box-shadow:0 15px 30px #000;
+
+    animation:cupFloat 4s infinite ease-in-out;
+}
+
+.cup:after{
+    content:"";
+    position:absolute;
+
+    right:-30px;
+    top:15px;
+
+    width:35px;
+    height:35px;
+
+    border:9px solid white;
+    border-left:0;
+
+    border-radius:0 50% 50% 0;
+}
+
+.coffee{
+    position:absolute;
+    left:8px;
+    top:7px;
+
+    width:94px;
+    height:22px;
+
+    background:#421b0b;
+    border-radius:50%;
+}
+
+
+/* STEAM */
+
+.steam{
+    position:absolute;
+    right:13.5%;
+    bottom:150px;
+}
+
+.steam span{
+    display:inline-block;
+
+    width:8px;
+    height:60px;
+
+    margin:0 5px;
+
+    border-left:2px solid rgba(255,255,255,.6);
+
+    border-radius:50%;
+
+    animation:steam 3s infinite ease-in-out;
+}
+
+.steam span:nth-child(2){
+    animation-delay:1s;
+}
+
+.steam span:nth-child(3){
+    animation-delay:2s;
+}
+
+
+/* FLOATING COFFEE BEANS */
+
+.bean{
+    position:absolute;
+
+    width:17px;
+    height:27px;
+
+    background:#6e3217;
+
+    border-radius:50%;
+
+    opacity:.7;
+
+    animation:beanFloat 6s infinite ease-in-out;
+}
+
+.bean:after{
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+    height:20px;
+
+    left:7px;
+    top:4px;
+
+    background:#b56d36;
+}
+
+.b1{
+    left:10%;
+    top:25%;
+}
+
+.b2{
+    right:20%;
+    top:22%;
+    animation-delay:1s;
+}
+
+.b3{
+    left:18%;
+    bottom:20%;
+    animation-delay:2s;
+}
+
+.b4{
+    right:7%;
+    bottom:30%;
+    animation-delay:3s;
+}
+
+
+/* REVIEWS */
+
+.reviews{
+    padding:110px 7%;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #3b190b,
+        #120604 70%
+    );
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.heading small{
+    color:#dba43e;
+    letter-spacing:5px;
+    font-size:10px;
+}
+
+.heading h2{
+    font-family:'Playfair Display',serif;
+    font-size:48px;
+    margin-top:10px;
+}
+
+.heading h2 span{
+    color:#e3af47;
+}
+
+.heading p{
+    color:#9e8d82;
+    font-size:11px;
+    margin-top:10px;
+}
+
+
+/* REVIEW GRID */
+
+.review-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.card{
+    position:relative;
+
+    padding:32px;
+
+    min-height:290px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #351509,
+        #180704
+    );
+
+    border:1px solid #714a1c;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    overflow:hidden;
+}
+
+.card:before{
+    content:"☕";
+
+    position:absolute;
+
+    right:-10px;
+    bottom:-25px;
+
+    font-size:120px;
+
+    opacity:.04;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+
+    border-color:#dca644;
+
+    box-shadow:
+    0 20px 45px rgba(220,166,68,.15);
+}
+
+.quote{
+    position:absolute;
+
+    right:20px;
+    top:0;
+
+    font-size:70px;
+
+    font-family:Georgia,serif;
+
+    color:#dca644;
+
+    opacity:.12;
+}
+
+.stars{
+    color:#f1bd4e;
+
+    font-size:17px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+    animation:glow 2s infinite alternate;
+}
+
+.card p{
+    color:#cdbdb2;
+
+    font-size:11px;
+
+    line-height:2;
+
+    min-height:95px;
+}
+
+.person{
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:20px;
+
+    padding-top:18px;
+
+    border-top:1px solid rgba(218,166,68,.2);
+}
+
+.photo{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:2px solid #c99738;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.person h3{
+    font-family:'Playfair Display',serif;
+    font-size:15px;
+}
+
+.person span{
+    display:block;
+
+    color:#8e7b70;
+
+    font-size:8px;
+
+    margin-top:3px;
+}
+
+
+/* RATING */
+
+.rating{
+    max-width:1000px;
+
+    margin:90px auto;
+
+    padding:40px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    text-align:center;
+
+    border:1px solid #76501e;
+
+    border-radius:22px;
+
+    background:#251006;
+}
+
+.rating h2{
+    font-family:'Playfair Display',serif;
+
+    font-size:60px;
+
+    color:#e4ad45;
+}
+
+.rating .stars{
+    margin:10px 0 0;
+}
+
+
+/* CTA */
+
+.cta{
+    min-height:430px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px;
+
+    background:
+    linear-gradient(
+        rgba(15,4,2,.65),
+        rgba(15,4,2,.94)
+    ),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.cta-script{
+    font-family:'Great Vibes',cursive;
+
+    font-size:60px;
+
+    color:#e9b84f;
+}
+
+.cta h2{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+}
+
+.cta p{
+    color:#c1b1a6;
+    font-size:11px;
+    max-width:600px;
+    margin:15px auto;
+    line-height:2;
+}
+
+.button{
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:13px 30px;
+
+    border:1px solid #dca744;
+
+    border-radius:30px;
+
+    color:#e8b34c;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    transition:.4s;
+}
+
+.button:hover{
+    background:#dfa943;
+    color:#160704;
+
+    box-shadow:0 0 25px #dca744;
+}
+
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+
+    background:#080201;
+
+    border-top:1px solid #38200d;
+}
+
+.footer-logo{
+    font-family:'Great Vibes',cursive;
+    color:#e6b04a;
+    font-size:50px;
+}
+
+footer p{
+    color:#766860;
+    font-size:9px;
+    margin-top:8px;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes steam{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-70px);
+    }
+}
+
+@keyframes cupFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes beanFloat{
+    0%,100%{
+        transform:translateY(0) rotate(20deg);
+    }
+
+    50%{
+        transform:translateY(-35px) rotate(160deg);
+    }
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 2px #e2a93e;
+    }
+
+    to{
+        text-shadow:
+        0 0 10px #e2a93e,
+        0 0 20px #e2a93e;
+    }
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav ul{
+        display:none;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cup,
+    .steam{
+        display:none;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .script{
+        font-size:55px;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .rating{
+        flex-direction:column;
+        gap:25px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+
+        Maheen's
+
+        <small>CAFE AND BITES</small>
+
+    </div>
+
+    <ul>
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="menu.html">MENU</a></li>
+
+        <li><a href="coffee.html">COFFEE</a></li>
+
+        <li><a href="specials.html">SPECIALS</a></li>
+
+        <li><a href="gallery.html">GALLERY</a></li>
+
+        <li><a href="nyc.html">NYC</a></li>
+
+        <li><a href="about.html">ABOUT</a></li>
+
+        <li>
+            <a href="index.html" class="home">
+                ← HOME
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- FLOATING BEANS -->
+
+<div class="bean b1"></div>
+<div class="bean b2"></div>
+<div class="bean b3"></div>
+<div class="bean b4"></div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="subtitle">
+            OUR CUSTOMERS
+        </div>
+
+        <div class="script">
+            Maheen's
+        </div>
+
+        <h1>
+            Reviews & <span>Love</span>
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            Great coffee becomes even better when
+            shared with wonderful people. See what
+            our guests have to say about their
+            Maheen's experience.
+        </p>
+
+    </div>
+
+
+    <!-- CUP -->
+
+    <div class="cup">
+        <div class="coffee"></div>
+    </div>
+
+
+    <!-- STEAM -->
+
+    <div class="steam">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+    <div class="heading">
+
+        <small>
+            CUSTOMER STORIES
+        </small>
+
+        <h2>
+            What Our <span>Guests Say</span>
+        </h2>
+
+        <p>
+            Real words from our coffee lovers.
+        </p>
+
+    </div>
+
+
+    <div class="review-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <div class="quote">"</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "The coffee was amazing and the
+                ambience is absolutely beautiful.
+                It feels like a premium café with
+                such a warm atmosphere!"
+            </p>
+
+            <div class="person">
+
+                <div class="photo">
+                    <img src="https://i.pravatar.cc/150?img=47">
+                </div>
+
+                <div>
+                    <h3>Ayesha</h3>
+                    <span>COFFEE LOVER</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <div class="quote">"</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "I absolutely loved the Bru coffee!
+                The taste was rich and creamy.
+                The décor and music made the
+                whole experience perfect."
+            </p>
+
+            <div class="person">
+
+                <div class="photo">
+                    <img src="https://i.pravatar.cc/150?img=12">
+                </div>
+
+                <div>
+                    <h3>Arjun</h3>
+                    <span>REGULAR GUEST</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <div class="quote">"</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Such a gorgeous café! The lighting,
+                coffee aroma and beautiful decoration
+                make this place perfect for spending
+                time with friends."
+            </p>
+
+            <div class="person">
+
+                <div class="photo">
+                    <img src="https://i.pravatar.cc/150?img=32">
+                </div>
+
+                <div>
+                    <h3>Sara</h3>
+                    <span>CAFÉ EXPLORER</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+
+        <div class="card">
+
+            <div class="quote">"</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "The cappuccino and chocolate cake
+                were delicious. Everything was fresh,
+                beautifully presented and full of
+                flavour."
+            </p>
+
+            <div class="person">
+
+                <div class="photo">
+                    <img src="https://i.pravatar.cc/150?img=5">
+                </div>
+
+                <div>
+                    <h3>Zoya</h3>
+                    <span>DESSERT LOVER</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 5 -->
+
+        <div class="card">
+
+            <div class="quote">"</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "My favourite place to relax!
+                Amazing coffee, delicious bites
+                and a beautiful atmosphere.
+                I will definitely visit again."
+            </p>
+
+            <div class="person">
+
+                <div class="photo">
+                    <img src="https://i.pravatar.cc/150?img=20">
+                </div>
+
+                <div>
+                    <h3>Rahul</h3>
+                    <span>FOODIE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 6 -->
+
+        <div class="card">
+
+            <div class="quote">"</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Beautiful café with amazing
+                coffee and wonderful vibes.
+                Maheen's Cafe is definitely
+                worth visiting!"
+            </p>
+
+            <div class="person">
+
+                <div class="photo">
+                    <img src="https://i.pravatar.cc/150?img=44">
+                </div>
+
+                <div>
+                    <h3>Hiba</h3>
+                    <span>HAPPY CUSTOMER</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RATING -->
+
+    <div class="rating">
+
+        <div>
+
+            <h2>4.9</h2>
+
+            <p>AVERAGE RATING</p>
+
+        </div>
+
+
+        <div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                LOVED BY OUR CUSTOMERS
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h2>1K+</h2>
+
+            <p>HAPPY GUESTS</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div>
+
+        <div class="cta-script">
+            Your Story
+        </div>
+
+        <h2>
+            Share Your Experience
+        </h2>
+
+        <p>
+            Had a delicious coffee or enjoyed
+            our bites? Tell us what you loved
+            about your visit to Maheen's Cafe.
+        </p>
+
+        <a href="#" class="button">
+            ★ WRITE A REVIEW
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        Maheen's
+    </div>
+
+    <p>
+        CAFE AND BITES
+    </p>
+
+    <p>
+        Great Coffee • Delicious Bites • Good Vibes
+    </p>
+
+    <p>
+        © 2026 Maheen's Cafe and Bites
+    </p>
+
+</footer>
+
+
+</body>
+</html>
